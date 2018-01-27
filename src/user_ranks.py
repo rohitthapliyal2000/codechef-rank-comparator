@@ -2,7 +2,7 @@ import requests
 import sys
 from lxml import html
 
-def details_for_one(handle, dic1):
+def details_for_one(handle, dic1, lis1):
 
 	#valid username url
 	url = 'https://www.codechef.com/users/' + handle
@@ -46,4 +46,5 @@ def details_for_one(handle, dic1):
 				i += 1
 			i += 1
 			dic1[ktr] = str
+			lis1.append(ktr)
 		i += 1
