@@ -41,5 +41,4 @@ rating2 = ur.ratings(handle)
 name2 = un.name(handle)
 
 print('\n')
-
 ll.finish_off(handle1, handle2, name1, name2, rating1, rating2, dic1, dic2, lis1, lis2)
