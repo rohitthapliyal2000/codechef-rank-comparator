@@ -12,6 +12,9 @@ handle2 = ""
 lis1 = []
 lis2 = []
 
+# For better UX
+print('\nMaximise the terminal\n')
+
 # user input 1
 handle = input("Enter handle for user 1 : ")
 handle1 = handle
@@ -40,5 +43,5 @@ rating2 = ur.ratings(handle)
 
 name2 = un.name(handle)
 
-print('\nMaximise the terminal\n')
+print('\n')
 ll.finish_off(handle1, handle2, name1, name2, rating1, rating2, dic1, dic2, lis1, lis2)
