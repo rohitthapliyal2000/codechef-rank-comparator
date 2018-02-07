@@ -1,28 +1,28 @@
 # codechef-rank-comparator
 Web scraping in python using lxml package (XML Path Language).
 
-Input :
+### Input :
 
-	Two codechef usernames which are to be compared
+*Two codechef usernames which are to be compared*
 
-Operations :
+### Operations :
 
-	Checks if the entered username is valid or not
+*Checks if the entered username is valid or not*
 	
-	Scraps the name of the user
+*Scraps the name of the user*
 	
-	Scraps the current codechef ratings of the user
+*Scraps the current codechef ratings of the user*
 	
-	Outputs the list of mutually participated contests of the users and the winner
+*Outputs the list of mutually participated contests of the users and the winner*
 	
 
-Packages used :
+### Packages used :
 
-	lxml library to use html element API
+*lxml library to use html element API*
 	
-	requests library to send HTTP request to the webpage
+*requests library to send HTTP request to the webpage*
 	
-	sys library to exit the system in case of errors
+*sys library to exit the system in case of errors*
 	
 
 Running the source code locally :
