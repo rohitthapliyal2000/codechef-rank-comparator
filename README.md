@@ -25,7 +25,7 @@ Web scraping in python using lxml package (XML Path Language).
 *sys library to exit the system in case of errors*
 	
 
-###Running the source code locally :
+### Running the source code locally :
 
 	Clone/Download the repo
 	
@@ -36,7 +36,7 @@ Web scraping in python using lxml package (XML Path Language).
 	Note : Keep the files saved in src in the same directory
 
 
-###Requirements to run the source :
+### Requirements to run the source :
 
 	Python 3 should be installed
 	
