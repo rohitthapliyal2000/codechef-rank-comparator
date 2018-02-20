@@ -23,7 +23,7 @@ def details_for_one(handle, dic1, lis1):
 
 	while(1):
 		cb = 0
-		if i != 0:
+		if i != 0 :
 			if(data[0][i-1] == ']' and data[0][i] == ';'):
 				break
 		if data[0][i] == '{':
