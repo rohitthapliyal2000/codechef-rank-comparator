@@ -14,7 +14,7 @@ def details_for_one(handle, dic1, lis1):
 	data = tree.xpath("//script[contains(text(), 'jQuery(document).foundation();')]/text()")
 
 	if len(data) == 0:
-		print("Handle is invalid")
+		print("Error :", handle, "is an invalid username")
 		sys.exit()
 
 
