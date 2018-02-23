@@ -1,8 +1,10 @@
 import requests
 import sys
 from lxml import html
+import lxml.etree
+import lxml._elementpath
 
-def details_for_one(handle, dic1, lis1):
+def details_for_one(handle, dic1, lis1, result):
 
 	#valid username url
 	url = 'https://www.codechef.com/users/' + handle
@@ -14,7 +16,8 @@ def details_for_one(handle, dic1, lis1):
 	data = tree.xpath("//script[contains(text(), 'jQuery(document).foundation();')]/text()")
 
 	if len(data) == 0:
-		print("Error :", handle, "is an invalid username")
+		result = result + "Handle: " + handle + " is invalid."
+		print("Wrong Handle: name_of_user_py")
 		sys.exit()
 
 
@@ -23,7 +26,7 @@ def details_for_one(handle, dic1, lis1):
 
 	while(1):
 		cb = 0
-		if i != 0 :
+		if i != 0:
 			if(data[0][i-1] == ']' and data[0][i] == ';'):
 				break
 		if data[0][i] == '{':
