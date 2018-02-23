@@ -36,7 +36,10 @@ Web scraping in python using lxml package (XML Path Language)
 *Compile/Run the application file i.e. app.py by running the following command:*
 	
 	$ python app.py
-		
+
+*Enter the following URL in address bar of your browser*
+	
+	localhost:5000
 
 ### Requirements to run the source :
 
@@ -67,6 +70,8 @@ The script works by sending request at URL : 'codechef.com/users/handle'. This p
 Flask web framework is used for creating a Web API to link the HTML file with the python script.
 
 The UI is created in HTML. The application is then deployed on Heroku cloud platform.
+
+The application can be run using the terminal through local host or directly through the [Heroku platform](http://codechefcomparator.herokuapp.com/)
 
 This Project is a joint contribution of :
 
