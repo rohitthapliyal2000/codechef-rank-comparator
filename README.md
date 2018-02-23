@@ -70,5 +70,5 @@ The UI is created in HTML. The application is then deployed on Heroku cloud plat
 
 This Project is joint contribution of :
 
-[Rohit Thapliyal](https://www.linkedin.com/in/rohit-thapliyal-515b5913a/)  [Neeraj Negi](https://www.linkedin.com/in/iamneerajnegi/)
+[Rohit Thapliyal](https://www.linkedin.com/in/rohit-thapliyal-515b5913a/) and [Neeraj Negi](https://www.linkedin.com/in/iamneerajnegi/)
 
