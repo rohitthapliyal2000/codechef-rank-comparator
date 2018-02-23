@@ -27,4 +27,4 @@ def ratings(handle, result):
 		for i in range(0, len(data[0])-2):
 			str += data[0][i]
 
-	return str2
+	return str
