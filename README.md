@@ -68,7 +68,7 @@ Flask web framework is used for creating a Web API to link the HTML file with th
 
 The UI is created in HTML. The application is then deployed on Heroku cloud platform.
 
-This Project is joint contribution of :
+This Project is a joint contribution of :
 
 [Rohit Thapliyal](https://www.linkedin.com/in/rohit-thapliyal-515b5913a/) and [Neeraj Negi](https://www.linkedin.com/in/iamneerajnegi/)
 
