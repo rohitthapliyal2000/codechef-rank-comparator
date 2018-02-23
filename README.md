@@ -1,5 +1,5 @@
 # codechef-rank-comparator
-Web scraping in python using lxml package (XML Path Language).
+Web scraping in python using lxml package (XML Path Language)
 
 ### Input :
 
@@ -16,40 +16,49 @@ Web scraping in python using lxml package (XML Path Language).
 *Outputs the list of mutually participated contests of the users and the winner*
 	
 
-### Packages used :
+### Packages/tools used :
 
 *lxml library to use html element API*
 	
 *requests library to send HTTP request to the webpage*
 	
 *sys library to exit the system in case of errors*
+
+*Flask web framework*
+
+*HTML and Javascript to create web template*
 	
 
 ### Running the source code locally :
 
-	Clone/Download the repo
+*Clone/Download the repo*
 	
-	Compile/Run the driver file i.e. driver.py by running the following command:
+*Compile/Run the application file i.e. app.py by running the following command:*
 	
-		$ python driver.py
+		$ python app.py
 		
-	Note : Keep the files saved in src in the same directory
-
 
 ### Requirements to run the source :
 
-	Python 3 should be installed
+*Python 3*
 	
-	Installing pip(Python Package Index) :
+*pip(Python Package Index) :*
 	
-		sudo apt-get install python3-pip
+	$ sudo apt-get install python3-pip
 		
-	Installing requests :
+*requests package :*
 	
-		pip3 install requests
+	$ pip3 install requests
 		
-	Installing lxml :
+*lxml package :*
 	
-		sudo apt-get install libxml2-dev libxslt1-dev python-dev
-		
-		pip install lxml
+	$ sudo apt-get install libxml2-dev libxslt1-dev python-dev
+
+	$ pip install lxml
+
+*Flask package :*
+	
+	$ pip install flask
+
+### The UI is an HTML file. Flask is used in creating the Web API. The application is deployed on Heroku cloud platform.
+
