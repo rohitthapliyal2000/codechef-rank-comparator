@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Codechef Rank Comparator</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Codechef rank Comparator using web scraping in python.">
+  	<meta name="keywords" content="Codechef Rank Comparator, Codechef">
+	<meta name="author" content="Front End: Neeraj Negi">
+	<meta name="author" content="Backend: Rohit Thapliyal">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<base href="/">
+	<style type="text/css">
+		body{
+			font-family: 'Roboto', sans-serif;
+		}
+		.loader {
+		    border: 5px solid #f3f3f3; /* Light grey */
+		    border-top: 5px solid #3498db; /* Blue */
+		    border-radius: 50%;
+		    width: 50px;
+		    height: 50px;
+		    animation: spin 2s linear infinite;
+		}
+		@keyframes spin {
+		    0% { transform: rotate(0deg); }
+		    100% { transform: rotate(360deg); }
+		}
+		#loader_text{
+			font-size: 20px;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		a:hover {
+			color: #9E9E9E;
+		}
+		a: visited{
+			color: #9E9E9E;
+		}
+		a:active {
+		    color: #9E9E9E;
+		}
+		.footer {
+		    position: fixed;
+		    left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    height: 30px;
+		    padding-top: 2px;
+		    background-color: #37474F;
+		    color: white;
+		    text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#submitButton").click(function(e){
+				e.preventDefault();
+				document.getElementById("result").style.display = "none";
+				var h1 = $("#handle1").val().toString();
+				var h2 = $("#handle2").val().toString();
+				if(h1 && h2){
+					document.getElementById("loader").style.display = "block";
+					document.getElementById("loader_text").style.display = "block";
+					var url = `/compare_rank/${h1}/${h2}`;
+					$.get(url).done(function(data){
+						$('.result').html(data);
+						document.getElementById("loader").style.display = "none";
+						document.getElementById("loader_text").style.display = "none";
+						document.getElementById("result").style.display = "block";
+					});
+				} else {
+					$('.result').html("Enter both handles...!");
+					document.getElementById("result").style.display = "block";
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse" style="background-color: #37474F;">
+	  <div class="container-fluid">
+	  	<center>
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#" style="color:#f3f3f3">Codechef Rank Comparator</a>
+		    </div>
+	    </center>
+	  </div>
+	</nav>
+	<div class="container">
+		<form>
+			<h2>Enter Details Below:</h2>
+			<p>Enter two handles of the users to compare their codechef ratings.</p>
+			<p style="font-size: 0.8em;">**Fetching data may take some time, so please be patient</p>
+			<div class="row">
+				<div class="col-cs-12 col-sm-12 col-md-12">
+					<div class="form-group">
+						<label>Enter Handle 1:</label>
+						<input type="text" id="handle1" tabindex="1" required>
+					</div>
+					<div class="form-group">
+						<label>Enter Handle 2:</label>
+						<input type="text" id="handle2" tabindex="2" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<button id="submitButton" tabindex="3" class="btn btn-primary btn-md">Compare</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="row" style="padding-left: 10px;">
+			<div class="loader" id="loader" style="display: none;">
+			</div>
+			<p id="loader_text" style="display: none; padding-top: 5px;">Fetching Data...!</p>
+		</div>
+		<pre class="result" id="result" style="display: none;"></pre>
+	</div>
+	<div class="footer" data-role="footer" data-position="fixed">
+		<a href="https://www.linkedin.com/in/iamneerajnegi/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i> Neeraj Negi</a>
+		<!--<a style="padding-left:20px;" href="#"><i class="fa fa-git"></i></a>-->
+		<a style="padding-left:20px;" href="https://www.linkedin.com/in/rohit-thapliyal-515b5913a" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i> Rohit Thapliyal</a>
+	</div>
+</body>
+</html>
