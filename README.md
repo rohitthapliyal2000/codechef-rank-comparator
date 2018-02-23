@@ -35,7 +35,7 @@ Web scraping in python using lxml package (XML Path Language)
 	
 *Compile/Run the application file i.e. app.py by running the following command:*
 	
-		$ python app.py
+	$ python app.py
 		
 
 ### Requirements to run the source :
@@ -60,5 +60,15 @@ Web scraping in python using lxml package (XML Path Language)
 	
 	$ pip install flask
 
-### The UI is an HTML file. Flask is used in creating the Web API. The application is deployed on Heroku cloud platform.
+### Description :
+
+The script works by sending request at URL : 'codechef.com/users/handle'. This part is handled by Python. XML Path Language is used for crawling. Separate files are specified for the information being scraped. A dictionary [contest -> rank] is created for both the users. The mutual contests becomes the part of the result. The information is stored in a string 'result'.
+
+Flask web framework is used for creating a Web API to link the HTML file with the python script.
+
+The UI is created in HTML. The application is then deployed on Heroku cloud platform.
+
+This Project is joint contribution of :
+
+[Rohit Thapliyal](https://www.linkedin.com/in/rohit-thapliyal-515b5913a/)  [Neeraj Negi](https://www.linkedin.com/in/iamneerajnegi/)
 
