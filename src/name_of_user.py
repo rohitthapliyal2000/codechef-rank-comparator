@@ -1,7 +1,8 @@
 import requests
 from lxml import html
+import sys
 
-def name(handle):
+def name(handle, result):
 
 	str = ""
 
@@ -16,7 +17,8 @@ def name(handle):
 	data = tree.xpath("//main[1]/aside/div/text()")
 
 	if len(data) == 0:
-		print("Not a valid handle")
+		result = result + "Handle: " + handle + " is not a valid handle."
+		print("Wrong Handle: name_of_user")
 
 	else:
 		for i in range(3, len(data[0])):
