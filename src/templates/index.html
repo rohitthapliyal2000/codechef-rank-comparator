@@ -17,6 +17,9 @@
 		body{
 			font-family: 'Roboto', sans-serif;
 		}
+		label{
+			font-weight: normal;
+		}
 		.loader {
 		    border: 5px solid #f3f3f3; /* Light grey */
 		    border-top: 5px solid #3498db; /* Blue */
@@ -65,15 +68,21 @@
 				var h1 = $("#handle1").val().toString();
 				var h2 = $("#handle2").val().toString();
 				if(h1 && h2){
-					document.getElementById("loader").style.display = "block";
-					document.getElementById("loader_text").style.display = "block";
-					var url = `/compare_rank/${h1}/${h2}`;
-					$.get(url).done(function(data){
-						$('.result').html(data);
-						document.getElementById("loader").style.display = "none";
-						document.getElementById("loader_text").style.display = "none";
+					if(h1 === h2){
+						$('.result').html("Enter different handles.");
 						document.getElementById("result").style.display = "block";
-					});
+					} else {
+						document.getElementById("loader").style.display = "block";
+						document.getElementById("loader_text").style.display = "block";
+						var url = `/compare_rank/${h1}/${h2}`;
+						$.get(url).done(function(data){
+							$('.result').html(data);
+							document.getElementById("loader").style.display = "none";
+							document.getElementById("loader_text").style.display = "none";
+							document.getElementById("result").style.display = "block";
+						});
+					}
+					
 				} else {
 					$('.result').html("Enter both handles...!");
 					document.getElementById("result").style.display = "block";
@@ -97,6 +106,7 @@
 			<h2>Enter Details Below:</h2>
 			<p>Enter two handles of the users to compare their codechef ratings.</p>
 			<p style="font-size: 0.8em;">**Fetching data may take some time, so please be patient</p>
+			<p style="font-size: 0.8em;">**Insert new queries after previous result is fetched.</p>
 			<div class="row">
 				<div class="col-cs-12 col-sm-12 col-md-12">
 					<div class="form-group">
@@ -126,7 +136,7 @@
 	</div>
 	<div class="footer" data-role="footer" data-position="fixed">
 		<a href="https://www.linkedin.com/in/iamneerajnegi/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i> Neeraj Negi</a>
-		<a style="padding-left:20px;" href="https://github.com/rohitthapliyal2000/codechef-rank-comparator"><i class="fa fa-github" style="font-size:24px"></i><span> Repository</span></a>
+		<a style="padding-left:20px;" href="https://github.com/rohitthapliyal2000/codechef-rank-comparator" target="_blank"><i class="fa fa-github" style="font-size:24px"></i> Repository</a>
 		<a style="padding-left:20px;" href="https://www.linkedin.com/in/rohit-thapliyal-515b5913a" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i> Rohit Thapliyal</a>
 	</div>
 </body>
