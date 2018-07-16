@@ -13,7 +13,11 @@ def details_for_one(handle, dic1, lis1, result):
 
 	tree = html.fromstring(page.content)
 
-	data = tree.xpath("//script[contains(text(), 'jQuery(document).foundation();')]/text()")
+	# data = tree.xpath("//script[contains(text(), 'jQuery(document).foundation();')]/text()")
+
+	data = tree.xpath("//script[contains(text(), 'var all_rating')]/text()")
+	print(data)
+	# print(data)
 
 	if len(data) == 0:
 		result = result + "Handle: " + handle + " is invalid."
@@ -32,7 +36,7 @@ def details_for_one(handle, dic1, lis1, result):
 		if data[0][i] == '{':
 			str = ""
 			ktr = ""
-			while(cb < 7):
+			while(cb < 9):
 				if(data[0][i] == ':'):
 					cb += 1
 				if(cb == 1):
@@ -41,7 +45,7 @@ def details_for_one(handle, dic1, lis1, result):
 						ktr += data[0][i]
 						i += 1
 					cb += 1
-				if(cb == 7):
+				if(cb == 9):
 					i += 2
 					while(data[0][i] != '"'):
 						str += data[0][i]
@@ -49,5 +53,6 @@ def details_for_one(handle, dic1, lis1, result):
 				i += 1
 			i += 1
 			dic1[ktr] = str
+			print(str)
 			lis1.append(ktr)
 		i += 1
