@@ -13,53 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<base href="/">
-	<style type="text/css">
-		body{
-			font-family: 'Roboto', sans-serif;
-		}
-		label{
-			font-weight: normal;
-		}
-		.loader {
-		    border: 5px solid #f3f3f3; /* Light grey */
-		    border-top: 5px solid #3498db; /* Blue */
-		    border-radius: 50%;
-		    width: 50px;
-		    height: 50px;
-		    animation: spin 2s linear infinite;
-		}
-		@keyframes spin {
-		    0% { transform: rotate(0deg); }
-		    100% { transform: rotate(360deg); }
-		}
-		#loader_text{
-			font-size: 20px;
-		}
-		a{
-			text-decoration: none;
-			color: white;
-		}
-		a:hover {
-			color: #9E9E9E;
-		}
-		a: visited{
-			color: #9E9E9E;
-		}
-		a:active {
-		    color: #9E9E9E;
-		}
-		.footer {
-		    position: fixed;
-		    left: 0;
-		    bottom: 0;
-		    width: 100%;
-		    height: 30px;
-		    padding-top: 2px;
-		    background-color: #37474F;
-		    color: white;
-		    text-align: center;
-		}
-	</style>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#submitButton").click(function(e){
@@ -82,7 +36,7 @@
 							document.getElementById("result").style.display = "block";
 						});
 					}
-					
+
 				} else {
 					$('.result').html("Enter both handles...!");
 					document.getElementById("result").style.display = "block";
